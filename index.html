@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/svg+xml" href="profile.svg" />
     <script src="script.js" defer></script>
+    <script type="module" src="projects.js"></script>
   </head>
   <body>
     <a class="skip" href="#profile">Skip to content</a>
@@ -19,8 +20,9 @@
         >AE<span>ABDELRAHMAN ELESSAWY</span></a
       >
       <nav aria-label="Main navigation">
-        <a href="#projects">WORK</a><a href="#interests">ATHLETICS</a
-        ><a href="#profile">ABOUT</a><a href="#contact">CONTACT</a>
+        <a href="#projects">WORK</a><a href="#github-projects">CODE</a
+        ><a href="#interests">ATHLETICS</a><a href="#profile">ABOUT</a
+        ><a href="#contact">CONTACT</a>
       </nav>
     </header>
     <div class="page-tools">
@@ -272,6 +274,54 @@
             alt="Certificate of completion awarded to Abdelrahman Elessawy for Level 1 Classical Technical Analysis, September 13, 2026"
             loading="lazy"
         /></a>
+      </section>
+
+      <section
+        id="github-projects"
+        class="section github-projects"
+        aria-labelledby="github-title"
+      >
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">ON GITHUB / LIVE PROJECTS</p>
+            <h2 id="github-title">Code in progress.</h2>
+          </div>
+          <a
+            class="text-link"
+            href="https://github.com/NotEssawy"
+            target="_blank"
+            rel="noopener noreferrer"
+            >MY GITHUB PROFILE ↗</a
+          >
+        </div>
+        <p class="repository-intro">
+          A live look at my latest public repositories, fetched directly from
+          GitHub.
+        </p>
+        <div class="repository-toolbar">
+          <button
+            id="refresh-projects"
+            class="outline-button"
+            type="button"
+            hidden
+          >
+            Refresh projects</button
+          ><span id="repository-updated"></span>
+        </div>
+        <p id="repository-status" role="status" aria-live="polite">
+          Loading public projects from GitHub…
+        </p>
+        <div
+          id="repository-grid"
+          class="repository-grid"
+          aria-busy="true"
+        ></div>
+        <noscript
+          ><p>
+            Enable JavaScript to load live projects, or visit my GitHub profile
+            using the link above.
+          </p></noscript
+        >
       </section>
     </main>
     <footer id="contact" class="section contact">
