@@ -8,10 +8,10 @@
       content="Abdelrahman Elessawy — Computer Science senior at AUC, founder of Outform Furniture, and athlete."
     />
     <title>Abdelrahman Elessawy | Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
     <link rel="icon" type="image/svg+xml" href="profile.svg" />
     <script src="script.js" defer></script>
-    <script type="module" src="projects.js"></script>
+    <script type="module" src="live.js"></script>
   </head>
   <body>
     <a class="skip" href="#profile">Skip to content</a>
@@ -20,7 +20,7 @@
         >AE<span>ABDELRAHMAN ELESSAWY</span></a
       >
       <nav aria-label="Main navigation">
-        <a href="#projects">WORK</a><a href="#github-projects">CODE</a
+        <a href="#projects">WORK</a><a href="#live">LIVE</a
         ><a href="#interests">ATHLETICS</a><a href="#profile">ABOUT</a
         ><a href="#contact">CONTACT</a>
       </nav>
@@ -277,49 +277,132 @@
       </section>
 
       <section
-        id="github-projects"
-        class="section github-projects"
-        aria-labelledby="github-title"
+        id="live"
+        class="section live-section"
+        aria-labelledby="live-title"
       >
         <div class="section-head">
           <div>
-            <p class="eyebrow">ON GITHUB / LIVE PROJECTS</p>
-            <h2 id="github-title">Code in progress.</h2>
+            <p class="eyebrow">THE EVERYDAY / LIVE</p>
+            <h2 id="live-title">Beyond the finish line.</h2>
           </div>
-          <a
-            class="text-link"
-            href="https://github.com/NotEssawy"
-            target="_blank"
-            rel="noopener noreferrer"
-            >MY GITHUB PROFILE ↗</a
-          >
         </div>
-        <p class="repository-intro">
-          A live look at my latest public repositories, fetched directly from
-          GitHub.
+        <p class="live-intro">
+          Cairo conditions, a fresh perspective, and stories from Egypt’s
+          fitness scene.
         </p>
-        <div class="repository-toolbar">
-          <button
-            id="refresh-projects"
-            class="outline-button"
-            type="button"
-            hidden
-          >
-            Refresh projects</button
-          ><span id="repository-updated"></span>
+        <div class="live-grid">
+          <article class="live-card" aria-labelledby="weather-title">
+            <p class="eyebrow">01 / CAIRO, EGYPT</p>
+            <h3 id="weather-title">Outside today.</h3>
+            <p
+              id="weather-status"
+              class="feed-status"
+              role="status"
+              aria-live="polite"
+            >
+              Loading Cairo weather…
+            </p>
+            <div id="weather-content" aria-busy="true"></div>
+            <div class="feed-footer">
+              <a
+                href="https://open-meteo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Weather by Open-Meteo ↗</a
+              ><button
+                id="refresh-weather"
+                class="outline-button"
+                type="button"
+                hidden
+              >
+                Refresh weather
+              </button>
+            </div>
+          </article>
+          <article class="live-card quote-card" aria-labelledby="quote-title">
+            <p class="eyebrow">02 / A FRESH PERSPECTIVE</p>
+            <h3 id="quote-title">A moment to reflect.</h3>
+            <p
+              id="quote-status"
+              class="feed-status"
+              role="status"
+              aria-live="polite"
+            >
+              Loading a quote…
+            </p>
+            <div id="quote-content" aria-busy="true"></div>
+            <div class="feed-footer">
+              <a
+                href="https://dummyjson.com/docs/quotes"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Quotes via DummyJSON ↗</a
+              ><button
+                id="refresh-quote"
+                class="outline-button"
+                type="button"
+                hidden
+              >
+                New quote
+              </button>
+            </div>
+          </article>
         </div>
-        <p id="repository-status" role="status" aria-live="polite">
-          Loading public projects from GitHub…
-        </p>
-        <div
-          id="repository-grid"
-          class="repository-grid"
-          aria-busy="true"
-        ></div>
+        <article class="news-panel" aria-labelledby="news-title">
+          <div class="news-heading">
+            <div>
+              <p class="eyebrow">03 / EGYPT IN MOTION</p>
+              <h3 id="news-title">From the fitness scene.</h3>
+            </div>
+            <button
+              id="refresh-news"
+              class="outline-button"
+              type="button"
+              hidden
+            >
+              Refresh news
+            </button>
+          </div>
+          <p class="live-intro">
+            Fitness, running and HYROX coverage from Egyptian Streets. Article
+            dates are shown below.
+          </p>
+          <label class="topic-label" for="news-topic">Explore a topic</label>
+          <select id="news-topic">
+            <option value="all">Fitness &amp; running</option>
+            <option value="hyrox">HYROX</option>
+            <option value="marathon">Running &amp; marathons</option>
+          </select>
+          <p
+            id="news-status"
+            class="feed-status"
+            role="status"
+            aria-live="polite"
+          >
+            Loading Egypt fitness news…
+          </p>
+          <div id="news-content" class="news-grid" aria-busy="true"></div>
+          <p class="feed-source">
+            Headlines via the
+            <a
+              href="https://egyptianstreets.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Egyptian Streets news API ↗</a
+            >. For confirmed HYROX dates, visit the
+            <a
+              href="https://hyrox.com/find-my-race/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >official race calendar ↗</a
+            >.
+          </p>
+        </article>
         <noscript
           ><p>
-            Enable JavaScript to load live projects, or visit my GitHub profile
-            using the link above.
+            Enable JavaScript to load weather, quotes and news. Source links
+            remain available above.
           </p></noscript
         >
       </section>
